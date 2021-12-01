@@ -1,0 +1,7 @@
+net.Receive("_SuicideSuccessfull", function(ply)
+    chat.AddText(ANTIKILL.Brackets, "[", ANTIKILL.Prefix, "DEATHS", ANTIKILL.Brackets, "] ", ANTIKILL.Message, "You have killed yourself. You have to wait "..ANTIKILL.Cooldown.." seconds before killing yourself again.")
+end)
+net.Receive("_SuicideUnSuccessfull", function(ply)
+    local timeLeft = net.ReadInt(12)
+    chat.AddText(ANTIKILL.Brackets, "[", ANTIKILL.Prefix, "DEATHS", ANTIKILL.Brackets, "] ", ANTIKILL.Message, "You have to wait "..timeLeft.." seconds before killing yourself again.")
+end)
